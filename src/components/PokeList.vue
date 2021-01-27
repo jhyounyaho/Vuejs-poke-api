@@ -1,19 +1,19 @@
 <template>
   <div @scroll="scroll" class="list">
-    <div v-for="poke in pokeList" :key="poke.name" class="poke" @click="pokeDetail(poke.id)">
-      <img :src="`${imgSrc}${poke.id}.png`">
-      <p>{{ poke.name }}</p>
+    <div v-for="poke in pokeList" :key="poke.name" class="poke">
+      <Poke :id="poke.id" :name="poke.name" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapMutations, mapActions } from 'vuex'
+import Poke from "@/components/Poke";
 
 export default {
+  components: {Poke},
   data() {
     return {
-      imgSrc: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
       isBottom: false,
       offset: 0,
       scrolledToBottom: false,
@@ -35,7 +35,6 @@ export default {
     ]),
     ...mapActions([
       'FETCH_POKE_LIST',
-      'FETCH_POKE_INFO',
     ]),
     fetchData() {
       this.FETCH_POKE_LIST(this.offset)
@@ -53,9 +52,6 @@ export default {
     next() {
       this.offset += 20;
       this.fetchData();
-    },
-    pokeDetail(id) {
-      this.FETCH_POKE_INFO(id);
     },
   },
   mounted () {
@@ -78,7 +74,6 @@ export default {
   text-align: center;
   text-transform: capitalize;
   border-radius: 5px;
-  cursor: pointer;
   box-shadow: 0 15px 30px rgba(0,0,0,.2),
   0 10px 10px rgba(0,0,0,.2);
 }
