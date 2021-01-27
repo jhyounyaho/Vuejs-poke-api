@@ -41,7 +41,6 @@ export default {
       pokeHeight: '',
       pokeWeight: '',
       pokeType: '',
-      pokeImg: [],
       imgSrc: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
     }
   },
@@ -57,20 +56,13 @@ export default {
       'SHOW_DETAIL_LIST',
     ]),
     fetchData() {
-      const { id, name, base_experience, height, weight, types, sprites } = this.$store.state.info;
+      const { id, name, base_experience, height, weight, types } = this.$store.state.info;
       this.pokeId = id;
       this.pokeName = name;
       this.pokeBaseEx = base_experience;
       this.pokeHeight = height;
       this.pokeWeight = weight;
       this.pokeType = types[0]["type"]["name"];
-      Object.keys(sprites).map((key) => {
-        const url = sprites[key]
-        if (url) {
-          this.pokeImg.push(url)
-        }
-      });
-      console.log(this.pokeImg)
     },
     showModal() {
       this.SHOW_DETAIL_LIST(false)
@@ -111,6 +103,7 @@ h3 {
 .body-wrap {
   color: #ffffff;
   padding: 20px;
+  border-radius: 3px;
 }
 
 .img-wrap {
