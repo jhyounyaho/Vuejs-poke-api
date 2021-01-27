@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <div class="poke-wrap">
+      <img
+        alt="poke logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+      >
       <PokeSearch></PokeSearch>
       <PokeList></PokeList>
       <PokeDetail v-if="showDetail"></PokeDetail>
