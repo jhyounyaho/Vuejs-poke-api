@@ -12,6 +12,7 @@ export const store = new Vuex.Store({
     state: {
         list: {},
         info: [],
+        showDetail: false,
     },
     getters: {
 
@@ -22,6 +23,10 @@ export const store = new Vuex.Store({
         },
         GET_POKE_INFO(state, info) {
             state.info = info;
+            state.showDetail = true;
+        },
+        SHOW_DETAIL_LIST(state, show) {
+            state.showDetail = show;
         },
     },
     actions: {

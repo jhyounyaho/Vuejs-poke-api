@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   data() {
     return {
@@ -14,9 +16,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'FETCH_POKE_INFO',
+    ]),
     searchPoke() {
-      console.log(this.pokeId)
-      this.$store.dispatch('FETCH_POKE_INFO', this.pokeId)
+      this.FETCH_POKE_INFO(this.pokeId);
     },
   },
 }
