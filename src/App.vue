@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <PokeSearch></PokeSearch>
-    <PokeList></PokeList>
-    <PokeDetail v-if="showDetail"></PokeDetail>
+    <div class="poke-wrap">
+      <PokeSearch></PokeSearch>
+      <PokeList></PokeList>
+      <PokeDetail v-if="showDetail"></PokeDetail>
+    </div>
   </div>
 </template>
 
@@ -11,11 +13,12 @@
 import PokeList from "@/components/PokeList";
 import PokeSearch from "@/components/PokeSearch";
 import PokeDetail from "@/components/PokeDetail";
+import { mapState } from 'vuex';
+
 export default {
   name: 'App',
   data() {
     return {
-      showDetail: false,
     }
   },
   components: {
@@ -25,8 +28,35 @@ export default {
   },
   watch: {
   },
+  computed: {
+    ...mapState({
+      showDetail: 'showDetail',
+    })
+  }
 }
 </script>
 
-<style scoped>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+#app {
+  background: #e9ecef;
+}
+.poke-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  width: calc(100% - 20px);
+  min-height: calc(100vh - 20px);
+
+  font-size: 1rem;
+  font-weight: normal;
+}
 </style>
