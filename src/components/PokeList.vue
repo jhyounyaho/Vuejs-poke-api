@@ -1,6 +1,6 @@
 <template>
   <div @scroll="scroll">
-    <div>
+    <div class="show-scrap-list-wrap">
       <i class="fas fa-check-circle" @click="scrap" :class="{ isScrap: this.$store.state.isScrap }"></i>
       SHOW SCRAP LIST
     </div>
@@ -55,6 +55,7 @@ export default {
             document.documentElement.scrollTop,
             document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
         if (bottomOfWindow) {
+          console.log('bottom')
           this.next()
         }
       }
@@ -78,9 +79,11 @@ export default {
 
 <style scoped>
 .list {
+  /*
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
+  */
   width: 100%;
   max-width: 510px;
 }
@@ -92,6 +95,9 @@ export default {
   border-radius: 5px;
   box-shadow: 0 15px 30px rgba(0,0,0,.2),
   0 10px 10px rgba(0,0,0,.2);
+  float: left;
+  width: 230px;
+  margin: 10px;
 }
 i {
   padding-bottom: 10px;
@@ -99,5 +105,8 @@ i {
 }
 .isScrap {
   color: #f03e3e;
+}
+.show-scrap-list-wrap {
+  padding-left: 10px;
 }
 </style>
