@@ -14,10 +14,35 @@ Vue.js
                  
 ## 4. localStorage 
 스크랩한 것만 모아보기시(SHOW SCRAP LIST) API 통신을 줄이고자 id, name을 localStorage 에 저장                  
-구분값 scraplist.id                  
-![localStorage](https://user-images.githubusercontent.com/42309919/106082180-8d92e800-615d-11eb-82fe-aaeb3f68f1f5.PNG)                              
+구분값 scraplist.id           
+### 수정전
+- id만 저장하여 스크랩리스트 로드시, api 하여 스크랩 내용만 노출하려 하였으나 id = 100 인 포켓몬을 위해 여러번 api 통신을 해야하는 단점           
+### 수정후 
+- id, name을 저장하여 localstorage 에서 리스트 추출하여 불필요한 API 통신을 하지 않고, 사용자가 설정한 순서대로 스크랩 내용 노출.          
+![localStorage](https://user-images.githubusercontent.com/42309919/106082180-8d92e800-615d-11eb-82fe-aaeb3f68f1f5.PNG)                                        
 
 ## 5. 기능
+### 1. 페이지로드          
+- 사용자가 스크롤을 진행함에 따라 api 통신하여 다음 페이지의 사진을 불러옴          
+  - 스크랩 리스트일 경우 localStorage에서 데이터 불러옴          
+  - 포켓몬 리스트일 경우 외부 API 통신하여 데이터 불러옴          
+- 포켓몬 이미지 클릭시 관련 포켓몬 정보 포켓몬 상세 내용 모달창에 노출          
+### 2. 검색
+- 숫자 검색시 관련 포켓몬 정보 포켓몬 상세 내용 모달창에 노출          
+- 유효성 검사 결과 모달창에서 error 내용 노출           
+  - 빈값 여부, 0, 숫자 여부           
+### 3. 포켓몬 상세 정보
+- 모달창에서 상세 정보 노출           
+- 노출 내용          
+  - 이미지, 이름, ID, 키, 몸무게, type에 맞는 배경색상           
+### 4. 스크랩           
+- 포켓몬 리스트에서 스크랩 기능 노출          
+  - 스크랩된 포켓몬 : red            
+  - 스크랩되지 않은 포켓몬 : black           
+### 5. 스크랩 모아보기           
+- SHOW SCRAP LIST 클릭시 스크랩 리스트 리셋 후 해당 스크랩 or 포켓몬 리스트 노출          
+  - 스크랩 리스트 : red          
+  - 포켓몬 리스트 : black            
 
 ## 6. 결과 화면
 메인화면 및 포켓몬 리스트 결과 화면              
