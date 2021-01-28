@@ -12,20 +12,20 @@ Vue.js
 ## 3. 컴포넌트 구성                 
 ![component](https://user-images.githubusercontent.com/42309919/106082175-8c61bb00-615d-11eb-9bbf-c7701fda3586.PNG)
 #### PokeSearch
-포켓몬 검색 컴포넌트
-기능 : 검색, 포켓몬 상세 내용 노출 
+포켓몬 검색 컴포넌트               
+기능 : 검색, 포켓몬 상세 내용 노출                
 #### PokeList
-포켓몬 리스트 컴포넌트 
-기능 : 페이지로드 
+포켓몬 리스트 컴포넌트                
+기능 : 페이지로드                
 #### Poke
-포켓몬 리스트에 노출되는 포켓몬별 컴포넌트
-기능 : data 노출, 스크랩, 포켓몬 상세 내용 노출 
+포켓몬 리스트에 노출되는 포켓몬별 컴포넌트               
+기능 : data 노출, 스크랩, 포켓몬 상세 내용 노출                
 #### PokeDetail
-포켓몬 상세정보 컴포넌트 
-기능 : data 노출 
+포켓몬 상세정보 컴포넌트                
+기능 : data 노출                
 #### common/Modal 
-검색시 유효성 체크, 상세 정보 노출에서 Modal 사용
-                 
+검색시 유효성 체크, 상세 정보 노출에서 Modal 사용               
+                                
 ## 4. localStorage 
 스크랩한 것만 모아보기시(SHOW SCRAP LIST) API 통신을 줄이고자 id, name을 localStorage 에 저장                  
 구분값 scraplist.id           
