@@ -55,7 +55,6 @@ export default {
             document.documentElement.scrollTop,
             document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
         if (bottomOfWindow) {
-          console.log('bottom')
           this.next()
         }
       }

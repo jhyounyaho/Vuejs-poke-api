@@ -27,6 +27,5 @@ export default {
     // RESET 리스트 정보
     RESET_POKE_LIST(state) {
         state.list = []
-        state.scrapStartNum = 0;
     },
 }
