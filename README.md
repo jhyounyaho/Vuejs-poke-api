@@ -13,13 +13,13 @@ Vue.js
 ![component](https://user-images.githubusercontent.com/42309919/106082175-8c61bb00-615d-11eb-9bbf-c7701fda3586.PNG)
 #### PokeSearch
 포켓몬 검색 컴포넌트               
-기능 : 검색, 포켓몬 상세 내용 노출                
+기능 : 검색            
 #### PokeList
 포켓몬 리스트 컴포넌트                
-기능 : 페이지로드                
+기능 : 페이지로드 (포켓몬 리스트, 스크랩 리스트)               
 #### Poke
 포켓몬 리스트에 노출되는 포켓몬별 컴포넌트               
-기능 : data 노출, 스크랩, 포켓몬 상세 내용 노출                
+기능 : data 노출, 스크랩             
 #### PokeDetail
 포켓몬 상세정보 컴포넌트                
 기능 : data 노출                
