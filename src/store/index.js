@@ -10,6 +10,7 @@ export const store = new Vuex.Store({
         list: [],
         info: [],
         showDetail: false,
+        isScrap: false,
     },
     mutations,
     actions,

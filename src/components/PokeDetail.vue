@@ -1,10 +1,9 @@
 <template>
-  <div :class="pokeType">
-    <Modal v-if="showModal" @close="showModal(false)">
-      <!-- you can use custom content here to overwrite default conten -->
+  <div>
+    <Modal @close="hideModal()">
       <h3 slot="header">
         Poke Info
-        <i class="fas fa-times closeModalBtn" @click="showModal(false)"></i>
+        <i class="fas fa-times closeModalBtn" @click="hideModal()"></i>
       </h3>
       <div slot="body" :class="pokeType" class="body-wrap">
         <div class="img-wrap">
@@ -53,7 +52,7 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'SHOW_DETAIL_LIST',
+      'SHOW_DETAIL_INFO',
     ]),
     fetchData() {
       const { id, name, base_experience, height, weight, types } = this.$store.state.info;
@@ -64,8 +63,9 @@ export default {
       this.pokeWeight = weight;
       this.pokeType = types[0]["type"]["name"];
     },
-    showModal() {
-      this.SHOW_DETAIL_LIST(false)
+    // 모달창 미노출
+    hideModal() {
+      this.SHOW_DETAIL_INFO(false)
     }
   }
 }
@@ -90,7 +90,6 @@ export default {
 .eletric {background:#fab005 !important;}
 .rock {background:#adb5bd !important;}
 .ground {background:#e67700 !important;}
-
 h3 {
   color: #e03131;
 }
@@ -99,13 +98,11 @@ h3 {
   margin-left: 200px;
   cursor: pointer;
 }
-
 .body-wrap {
   color: #ffffff;
   padding: 20px;
   border-radius: 3px;
 }
-
 .img-wrap {
   padding-left: 40px;
 }
@@ -113,4 +110,3 @@ li {
   margin-bottom: 10px;
 }
 </style>
-
