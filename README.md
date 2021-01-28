@@ -26,8 +26,12 @@ Vue.js
 스크랩 리스트 결과 화면             
 ![scrapList](https://user-images.githubusercontent.com/42309919/106082172-8b308e00-615d-11eb-83b3-641359702553.PNG)             
              
-포켓몬 상세 정보 결과 화면              
-![PokeDetail](https://user-images.githubusercontent.com/42309919/106082181-8d92e800-615d-11eb-8b59-a80570585c6f.PNG)             
+포켓몬 상세 정보 결과 화면 - 포켓몬별 type에 따라 배경색 다르게 노출              
+![PokeDetail](https://user-images.githubusercontent.com/42309919/106082181-8d92e800-615d-11eb-8b59-a80570585c6f.PNG)   
+![PokeDetail5](https://user-images.githubusercontent.com/42309919/106097736-30a62a80-617b-11eb-9265-8711c387b336.PNG)
+![PokeDetail2](https://user-images.githubusercontent.com/42309919/106097739-31d75780-617b-11eb-9be5-75d936f7794c.PNG)
+![PokeDetail3](https://user-images.githubusercontent.com/42309919/106097742-31d75780-617b-11eb-93bd-2a45f5e7dbda.PNG)
+![PokeDetail4](https://user-images.githubusercontent.com/42309919/106097743-326fee00-617b-11eb-815b-37adab031835.PNG)
              
 검색시 유효성 체크 결과 화면 - 모달창 이용              
 ![error1](https://user-images.githubusercontent.com/42309919/106082176-8c61bb00-615d-11eb-9763-7d8cf050f5c5.PNG)             
