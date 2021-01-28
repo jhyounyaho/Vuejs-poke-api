@@ -20,17 +20,10 @@ import PokeDetail from "@/components/PokeDetail";
 import { mapState } from 'vuex';
 
 export default {
-  name: 'App',
-  data() {
-    return {
-    }
-  },
   components: {
     PokeDetail,
     PokeSearch,
     PokeList
-  },
-  watch: {
   },
   computed: {
     ...mapState({
@@ -49,7 +42,7 @@ ul {
   list-style: none;
 }
 #app {
-  background: #e9ecef;
+  background-color: #42b883;
 }
 .poke-wrap {
   display: flex;

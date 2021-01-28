@@ -1,9 +1,8 @@
 <template>
   <div class="pokesearch-wrap">
-    <input type="text" v-model="pokeId" @keyup.enter="searchPoke" class="inputBox" placeholder="e.g., 34">
+    <input type="text" v-model="pokeId" @keyup.enter="searchPoke" class="inputBox" placeholder="ex 34">
     <i class="fas fa-search" @click="searchPoke"></i>
     <Modal v-if="showModal" @close="showModal = false">
-      <!-- you can use custom content here to overwrite default conten -->
       <h3 slot="header">
         Error!
         <i class="fas fa-times closeModalBtn" @click="showModal = false"></i>
@@ -35,12 +34,12 @@ export default {
     ]),
     searchPoke() {
       const chk_value = /^[0-9]+$/
-      if (this.pokeId == 0) {
-        this.FailMessage = '다른 번호를 입력해주세요.';
+      if (this.pokeId.length < 1) {
+        this.FailMessage = 'ID 번호를 입력해주세요.';
         this.showModal = true
         return false
-      } else if (this.pokeId.length < 1) {
-        this.FailMessage = 'ID 번호를 입력해주세요.';
+      } else if (this.pokeId == 0) {
+        this.FailMessage = '다른 번호를 입력해주세요.';
         this.showModal = true
         return false
       } else if (!chk_value.test(this.pokeId)) {
