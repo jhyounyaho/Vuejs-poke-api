@@ -32,7 +32,7 @@ Vue.js
 ### 수정전
 - id만 저장하여 스크랩 리스트 로드시, api 통신하여 스크랩된 내용만 노출하려 하였으나 ex) id = 100 인 포켓몬을 위해 여러번 api 통신을 해야하는 문제점 발생            
 ### 수정후 
-- id, name을 저장하여 localstorage 에서 리스트를 추출하여 불필요한 API 통신을 하지 않고, 사용자가 설정한 순서대로 스크랩 내용 노출.          
+- 리스트 API통신시 가져오는 값은 id, name 두가지이기 때문에 스크랩을 위한 api통신은 필요 없다고 판단. id, name을 저장하여 localstorage 에서 리스트를 추출하여 불필요한 API 통신을 하지 않고, 사용자가 설정한 순서대로 스크랩 내용 노출.          
 ### localStorage 구조 
 ![localStorage](https://user-images.githubusercontent.com/42309919/106082180-8d92e800-615d-11eb-82fe-aaeb3f68f1f5.PNG)                                        
 
