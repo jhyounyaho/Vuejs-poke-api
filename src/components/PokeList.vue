@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'GET_SCRAP_POKE_LIST',
+      'SET_SCRAP_POKE_LIST',
       'CHANGE_IS_SCRAP',
       'RESET_POKE_LIST',
     ]),
@@ -45,7 +45,7 @@ export default {
     ]),
     fetchData() {
       this.$store.state.isScrap
-          ? this.GET_SCRAP_POKE_LIST({ offset: this.offset, limit: this.limit })
+          ? this.SET_SCRAP_POKE_LIST({ offset: this.offset, limit: this.limit })
           : this.FETCH_POKE_LIST({ offset: this.offset, limit: this.limit })
     },
     scroll () {

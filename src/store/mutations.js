@@ -1,15 +1,15 @@
 export default {
-    // GET 포켓몬 리스트
-    GET_POKE_LIST(state, list) {
+    // SET 포켓몬 리스트
+    SET_POKE_LIST(state, list) {
         state.list = [...state.list, ...list];
     },
-    // GET 포켓몬 정보
-    GET_POKE_INFO(state, info) {
+    // SET 포켓몬 정보
+    SET_POKE_INFO(state, info) {
         state.info = info;
         state.showDetail = true;
     },
-    // GET 스크랩 포켓몬 리스트
-    GET_SCRAP_POKE_LIST(state, { offset, limit }) {
+    // SET 스크랩 포켓몬 리스트
+    SET_SCRAP_POKE_LIST(state, { offset, limit }) {
         const scrapList = localStorage.scraplist ? JSON.parse(localStorage.scraplist) : [];
         const sliceScrapList = scrapList.slice(offset, offset + limit)
         if (sliceScrapList.length > 0) {

@@ -47,7 +47,16 @@ export default {
         this.showModal = true
         return false
       }
-      this.FETCH_POKE_INFO(this.pokeId);
+      this.FETCH_POKE_INFO(this.pokeId)
+          .then(res => {
+            if (res.status !== 200) {
+              if (res.response.status === 404) {
+                this.FailMessage = '해당 숫자에 맞는 포켓몬이 없습니다.';
+                this.showModal = true
+                return false
+              }
+            }
+          })
     },
   },
   components: {
