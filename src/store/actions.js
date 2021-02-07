@@ -19,13 +19,10 @@ export default {
     // 포켓몬 정보
     FETCH_POKE_INFO({ commit }, id) {
         return fetchPokeInfo(id)
-            .then(res => {
-                commit('SET_POKE_INFO', res.data)
-                return res
-            })
+            .then(res => res.status === 200 && commit('SET_POKE_INFO', res.data))
             .catch(err => {
                 console.log(err)
-                return err
+                throw err
             })
     },
 }
