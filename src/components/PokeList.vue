@@ -1,9 +1,5 @@
 <template>
   <div @scroll="scroll">
-    <div class="show-scrap-list-wrap">
-      <i class="fas fa-check-circle" @click="scrap" :class="{ isScrap: this.$store.state.isScrap }"></i>
-      SHOW SCRAP LIST
-    </div>
     <div class="list">
       <div v-for="poke in pokeList" :key="poke.id" class="poke">
         <Poke :id="poke.id" :name="poke.name" />
@@ -32,12 +28,15 @@ export default {
     },
   },
   created() {
+    this.SET_IS_SCRAP(this.$route.name)
+    this.RESET_POKE_LIST()
+    this.offset = 0;
     this.fetchData();
   },
   methods: {
     ...mapMutations([
       'SET_SCRAP_POKE_LIST',
-      'CHANGE_IS_SCRAP',
+      'SET_IS_SCRAP',
       'RESET_POKE_LIST',
     ]),
     ...mapActions([
@@ -62,12 +61,6 @@ export default {
     next() {
       this.offset += this.limit;
       this.fetchData();
-    },
-    scrap() {
-      this.CHANGE_IS_SCRAP()
-      this.RESET_POKE_LIST()
-      this.offset = 0;
-      this.fetchData()
     },
   },
   mounted () {
@@ -101,11 +94,5 @@ export default {
 i {
   padding-bottom: 10px;
   cursor: pointer;
-}
-.isScrap {
-  color: #f03e3e;
-}
-.show-scrap-list-wrap {
-  padding-left: 10px;
 }
 </style>

@@ -1,29 +1,31 @@
 <template>
   <div id="app">
     <div class="poke-wrap">
-      <img
-        alt="poke logo"
-        src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
-      >
+      <router-link to="/">
+        <img
+            alt="poke logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+        >
+      </router-link>
       <PokeSearch></PokeSearch>
-      <PokeList></PokeList>
+      <NavBar></NavBar>
+      <router-view></router-view>
       <PokeDetail v-if="showDetail"></PokeDetail>
     </div>
   </div>
 </template>
 
 <script>
-
-import PokeList from "@/components/PokeList";
 import PokeSearch from "@/components/PokeSearch";
 import PokeDetail from "@/components/PokeDetail";
 import { mapState } from 'vuex';
+import NavBar from "@/components/NavBar";
 
 export default {
   components: {
+    NavBar,
     PokeDetail,
     PokeSearch,
-    PokeList
   },
   computed: {
     ...mapState({
@@ -46,7 +48,6 @@ ul {
 }
 .poke-wrap {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 10px;

@@ -17,12 +17,12 @@ export default {
         }
     },
     // 포켓몬 상세 정보 노출
-    SHOW_DETAIL_INFO(state, show) {
-        state.showDetail = show;
+    SHOW_DETAIL_INFO(state, toggle) {
+        state.showDetail = toggle;
     },
     // 스크랩 여부 체크
-    CHANGE_IS_SCRAP(state) {
-        state.isScrap = !state.isScrap
+    SET_IS_SCRAP(state, scrap) {
+        state.isScrap = scrap === 'scrap' ? true : false
     },
     // RESET 리스트 정보
     RESET_POKE_LIST(state) {
