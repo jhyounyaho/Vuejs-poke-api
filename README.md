@@ -37,8 +37,8 @@ Vue.js
 검색시 유효성 체크, 상세 정보 노출에서 Modal 사용               
                     
 ## 4. 페이지 구성      
-- Poke List: 포켓몬 리스트 노출
-- Scrap List: 스크랩 리스트 노출 
+- list: 포켓몬 리스트 노출
+- scrap: 스크랩 리스트 노출 
 - else : 404 not found 페이지 노출 
                     
 ## 5. localStorage 
