@@ -97,6 +97,6 @@ Vue.js
 #### 검색시 유효성 체크 결과 화면 - 모달창 이용              
 ![error1](https://user-images.githubusercontent.com/42309919/106082176-8c61bb00-615d-11eb-9763-7d8cf050f5c5.PNG)             
 ![error2](https://user-images.githubusercontent.com/42309919/106082177-8cfa5180-615d-11eb-9192-1011d3ee3823.PNG)             
-![error3](https://user-images.githubusercontent.com/42309919/106082179-8cfa5180-615d-11eb-8b24-0cc3c2474753.PNG)
-+) 추가                     
+![error3](https://user-images.githubusercontent.com/42309919/106082179-8cfa5180-615d-11eb-8b24-0cc3c2474753.PNG)                                      
++) 추가                                            
 ![err](https://user-images.githubusercontent.com/42309919/107169039-3e23a600-6a00-11eb-9e11-53f2bbf6e86c.PNG)
