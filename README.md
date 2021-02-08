@@ -20,10 +20,10 @@ Vue.js
 ![notfoun_component](https://user-images.githubusercontent.com/42309919/107169613-aaeb7000-6a01-11eb-8e81-d42eb72586a8.PNG)
 #### PokeSearch
 포켓몬 검색 컴포넌트               
-기능 : 검색 
+기능 : 검색                    
 #### NavBar
-메뉴 컴포넌트 
-기능 : 페이지 이동 
+메뉴 컴포넌트                        
+기능 : 페이지 이동           
 #### PokeList
 포켓몬 리스트 컴포넌트                
 기능 : 페이지로드 (포켓몬 리스트, 스크랩 리스트)               
