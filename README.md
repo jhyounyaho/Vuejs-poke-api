@@ -12,7 +12,12 @@ Vue.js
     └── store   
 
 ## 3. 컴포넌트 구성                 
-![component](https://user-images.githubusercontent.com/42309919/106082175-8c61bb00-615d-11eb-9bbf-c7701fda3586.PNG)
+#### 메인 / poke list 
+![list_component](https://user-images.githubusercontent.com/42309919/107169610-a9ba4300-6a01-11eb-912c-1e8fa17c5a41.PNG)
+#### scrap list 
+![scrap_component](https://user-images.githubusercontent.com/42309919/107169612-aaeb7000-6a01-11eb-9903-d86998efbf4e.PNG)
+#### not found 
+![notfoun_component](https://user-images.githubusercontent.com/42309919/107169613-aaeb7000-6a01-11eb-8e81-d42eb72586a8.PNG)
 #### PokeSearch
 포켓몬 검색 컴포넌트               
 기능 : 검색 
