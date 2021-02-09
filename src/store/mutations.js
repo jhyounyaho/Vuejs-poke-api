@@ -20,10 +20,6 @@ export default {
     SHOW_DETAIL_INFO(state, toggle) {
         state.showDetail = toggle;
     },
-    // 스크랩 여부 체크
-    SET_IS_SCRAP(state, scrap) {
-        state.isScrap = scrap === 'scrap' ? true : false
-    },
     // RESET 리스트 정보
     RESET_POKE_LIST(state) {
         state.list = []

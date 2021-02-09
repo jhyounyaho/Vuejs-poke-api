@@ -28,7 +28,6 @@ export default {
     },
   },
   created() {
-    this.SET_IS_SCRAP(this.$route.name)
     this.RESET_POKE_LIST()
     this.offset = 0;
     this.fetchData();
@@ -36,16 +35,15 @@ export default {
   methods: {
     ...mapMutations([
       'SET_SCRAP_POKE_LIST',
-      'SET_IS_SCRAP',
       'RESET_POKE_LIST',
     ]),
     ...mapActions([
       'FETCH_POKE_LIST',
     ]),
     fetchData() {
-      this.$store.state.isScrap
-          ? this.SET_SCRAP_POKE_LIST({ offset: this.offset, limit: this.limit })
-          : this.FETCH_POKE_LIST({ offset: this.offset, limit: this.limit })
+      this.$route.name === 'list'
+          ? this.FETCH_POKE_LIST({ offset: this.offset, limit: this.limit })
+          : this.SET_SCRAP_POKE_LIST({ offset: this.offset, limit: this.limit })
     },
     scroll () {
       window.onscroll = () => {
