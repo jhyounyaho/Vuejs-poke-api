@@ -100,3 +100,15 @@ Vue.js
 ![error3](https://user-images.githubusercontent.com/42309919/106082179-8cfa5180-615d-11eb-8b24-0cc3c2474753.PNG)                                      
 +) 추가                                            
 ![err](https://user-images.githubusercontent.com/42309919/107169039-3e23a600-6a00-11eb-9e11-53f2bbf6e86c.PNG)
+
+*** 
+
+## Poke API 에 더 추가해 보고 싶은 것들
+### swagger 
+https://swagger.io/               
+개발자가 REST 웹 서비스를 설계, 빌드, 문서화, 소비하는 일을 도와주는 대형 도구 생태계의 지원을 받는 오픈 소스 소프트웨어 프레임워크                           
+'캡틴판교 - Vue.js 끝장내기 실무에 필요한 모든 것' 에서 알게된 것         
+장점 
+- API 문서화 시간을 줄일 수 있다.
+- API 시각화            
+
